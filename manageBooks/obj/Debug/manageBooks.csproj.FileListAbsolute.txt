@@ -1,0 +1,10 @@
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\bin\Debug\manageBooks.exe.config
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\bin\Debug\manageBooks.exe
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\bin\Debug\manageBooks.pdb
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.csprojAssemblyReference.cache
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.Form1.resources
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.Properties.Resources.resources
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.csproj.GenerateResource.cache
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.csproj.CoreCompileInputs.cache
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.exe
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.pdb
