@@ -65,19 +65,20 @@
             // añadirToolStripMenuItem
             // 
             this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
-            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.añadirToolStripMenuItem.Text = "Añadir";
+            this.añadirToolStripMenuItem.Click += new System.EventHandler(this.añadirToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // librosLeídosToolStripMenuItem
             // 
             this.librosLeídosToolStripMenuItem.Name = "librosLeídosToolStripMenuItem";
-            this.librosLeídosToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.librosLeídosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.librosLeídosToolStripMenuItem.Text = "Libros leídos";
             // 
             // autoresToolStripMenuItem

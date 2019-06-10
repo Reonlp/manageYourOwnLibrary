@@ -8,3 +8,4 @@ C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\D
 C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.csproj.CoreCompileInputs.cache
 C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.exe
 C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.pdb
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.Vista.agregarLibro.resources

@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Modelo\Autor.cs" />
     <Compile Include="Modelo\Libro.cs" />
+    <Compile Include="Vista\agregarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\agregarLibro.Designer.cs">
+      <DependentUpon>agregarLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +62,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Vista\agregarLibro.resx">
+      <DependentUpon>agregarLibro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
     </EmbeddedResource>

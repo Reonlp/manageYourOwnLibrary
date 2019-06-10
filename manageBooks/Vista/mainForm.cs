@@ -1,4 +1,5 @@
-﻿using System;
+﻿using manageBooks.Vista;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace manageBooks
         public Form1()
         {
             InitializeComponent();
+        }
+
+        agregarLibro p = new agregarLibro();
+
+        private void añadirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            p.Show();
+           
         }
     }
 }
