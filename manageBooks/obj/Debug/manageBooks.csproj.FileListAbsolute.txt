@@ -9,3 +9,5 @@ C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\D
 C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.exe
 C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.pdb
 C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.Vista.agregarLibro.resources
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\bin\Debug\Database.mdf
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\bin\Debug\Database_log.ldf

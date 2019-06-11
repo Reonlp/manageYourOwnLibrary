@@ -20,16 +20,17 @@ namespace manageBooks.Vista
 
         private void agregarLibro_Load(object sender, EventArgs e)
         {
-
+            dtpFecha.Enabled = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Boolean acabado = false;
-
+            
             if (rbSi.Checked)
             {
                 acabado = true;
+                dtpFecha.Enabled = true;
             }
             else if (rbNo.Checked)
             {
@@ -43,6 +44,17 @@ namespace manageBooks.Vista
             libro.finalizado = acabado;
             libro.fecha = dtpFecha.Value;
 
+        }
+
+        private void rbSi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbSi.Checked)
+            {
+                dtpFecha.Enabled = true;
+            } else if (rbNo.Checked)
+            {
+                dtpFecha.Enabled = false;
+            }
         }
     }
 }

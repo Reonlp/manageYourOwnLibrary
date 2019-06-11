@@ -111,6 +111,7 @@
             this.rbSi.TabStop = true;
             this.rbSi.Text = "Sí";
             this.rbSi.UseVisualStyleBackColor = true;
+            this.rbSi.CheckedChanged += new System.EventHandler(this.rbSi_CheckedChanged);
             // 
             // rbNo
             // 
