@@ -1,4 +1,5 @@
-﻿using manageBooks.Modelo;
+﻿using manageBooks.Controlador;
+using manageBooks.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,8 @@ namespace manageBooks.Vista
             dtpFecha.Enabled = false;
         }
 
+        Controlador.BBDDLibros datosLibros = new BBDDLibros();
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Boolean acabado = false;
@@ -43,6 +46,8 @@ namespace manageBooks.Vista
             libro.idioma = cmbIdioma.Text;
             libro.finalizado = acabado;
             libro.fecha = dtpFecha.Value;
+
+            datosLibros.getAllBooks();
 
         }
 
