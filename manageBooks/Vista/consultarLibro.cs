@@ -25,8 +25,10 @@ namespace manageBooks.Vista
         {
            List<Libro> todosLosLibros = datosLibros.getAllBooks();
 
+            table.Rows.Clear();
 
             table.AllowUserToAddRows = true;
+
             for(int i = 0; i < todosLosLibros.Count; i++)
             {
                 DataGridViewRow row = (DataGridViewRow)table.Rows[i].Clone();
@@ -34,11 +36,13 @@ namespace manageBooks.Vista
                 row.Cells[1].Value = todosLosLibros[i].titulo;
                 row.Cells[2].Value = todosLosLibros[i].idioma;
                 row.Cells[3].Value = todosLosLibros[i].finalizado;
-               // row.Cells[4].Value = todosLosLibros[i].fecha;
+                row.Cells[4].Value = todosLosLibros[i].fecha;
                 table.Rows.Add(row);
             }
 
             table.AllowUserToAddRows = false;
         }
+
+      
     }
 }

@@ -30,7 +30,7 @@ namespace manageBooks.Controlador
                     libro.titulo = dr.GetString(1);
                     libro.idioma = dr.GetString(2);
                     libro.finalizado = dr.GetBoolean(3);
-                    //libro.fecha = dr.GetDateTime(4);
+                    libro.fecha = dr.GetDateTime(4);
 
                     todosLosLibros.Add(libro);
 
@@ -43,6 +43,21 @@ namespace manageBooks.Controlador
             dr.Close();
 
             return todosLosLibros;
+        }
+
+        public void insertarLibro(Libro libro)
+        {
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\leons\\OneDrive\\Bureau\\gestionarLibrosApp2\\manageBooks\\manageBooks\\Database.mdf;Integrated Security=True");
+            SqlCommand cmd;
+            //SqlDataReader dr;
+
+            con.Open();
+            String sintax = "INSERT INTO Libros (Titulo, Idioma, Finalizado, Fecha) VALUES ('" + libro.titulo + "', '" + libro.idioma + "', '" + libro.finalizado + "', '" + libro.fecha + "');";
+            cmd = new SqlCommand(sintax, con);
+            int result = cmd.ExecuteNonQuery();
+
+            con.Close();
+
         }
     }
 }

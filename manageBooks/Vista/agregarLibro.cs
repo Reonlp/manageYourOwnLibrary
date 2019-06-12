@@ -47,7 +47,7 @@ namespace manageBooks.Vista
             libro.finalizado = acabado;
             libro.fecha = dtpFecha.Value;
 
-            datosLibros.getAllBooks();
+            datosLibros.insertarLibro(libro);
 
         }
 

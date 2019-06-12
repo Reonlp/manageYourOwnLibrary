@@ -17,11 +17,11 @@ namespace manageBooks.Modelo
 
         public Libro()
         {
-            _id = 0;
+          
             _titulo = "";
             _idioma = "";
             _finalizado = false;
-            _fecha = DateTime.MinValue;
+            _fecha = new DateTime();
         }
 
         public int id
