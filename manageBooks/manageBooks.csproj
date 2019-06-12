@@ -70,6 +70,12 @@
     <Compile Include="Vista\agregarLibro.Designer.cs">
       <DependentUpon>agregarLibro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\consultarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\consultarLibro.Designer.cs">
+      <DependentUpon>consultarLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Vista\agregarLibro.resx">
       <DependentUpon>agregarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\consultarLibro.resx">
+      <DependentUpon>consultarLibro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>

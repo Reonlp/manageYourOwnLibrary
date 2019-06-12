@@ -15,6 +15,15 @@ namespace manageBooks.Modelo
         private DateTime _fecha;
 
 
+        public Libro()
+        {
+            _id = 0;
+            _titulo = "";
+            _idioma = "";
+            _finalizado = false;
+            _fecha = DateTime.MinValue;
+        }
+
         public int id
         {
             get { return _id; }

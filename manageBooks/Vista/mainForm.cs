@@ -18,12 +18,18 @@ namespace manageBooks
             InitializeComponent();
         }
 
-        agregarLibro p = new agregarLibro();
+        agregarLibro agregar = new agregarLibro();
+        consultarLibro consultar = new consultarLibro();
 
         private void añadirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            p.Show();
+            agregar.Show();
            
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            consultar.Show();
         }
     }
 }
