@@ -37,7 +37,6 @@
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,6 +45,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.rbSi = new System.Windows.Forms.RadioButton();
             this.rbNo = new System.Windows.Forms.RadioButton();
+            this.lbTotal = new System.Windows.Forms.Label();
+            this.lbEspanol = new System.Windows.Forms.Label();
+            this.lbFinalizados = new System.Windows.Forms.Label();
+            this.lbIngles = new System.Windows.Forms.Label();
+            this.lbJapones = new System.Windows.Forms.Label();
+            this.lbFrances = new System.Windows.Forms.Label();
+            this.lbAcabados = new System.Windows.Forms.Label();
+            this.lbSinAcabar = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbAnio = new System.Windows.Forms.ComboBox();
+            this.lbInfoAnio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -70,10 +80,11 @@
             this.Idioma,
             this.Finalizado,
             this.Fecha});
-            this.table.Location = new System.Drawing.Point(12, 261);
+            this.table.Location = new System.Drawing.Point(12, 311);
             this.table.Name = "table";
-            this.table.Size = new System.Drawing.Size(776, 177);
+            this.table.Size = new System.Drawing.Size(930, 259);
             this.table.TabIndex = 1;
+            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             // 
             // Id
             // 
@@ -120,35 +131,32 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Idioma:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(368, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "label3";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(368, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 16);
+            this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Finalizados:";
+            this.label4.Text = "Estado:";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lbSinAcabar);
+            this.groupBox1.Controls.Add(this.lbAcabados);
+            this.groupBox1.Controls.Add(this.lbFrances);
+            this.groupBox1.Controls.Add(this.lbJapones);
+            this.groupBox1.Controls.Add(this.lbIngles);
+            this.groupBox1.Controls.Add(this.lbFinalizados);
+            this.groupBox1.Controls.Add(this.lbEspanol);
+            this.groupBox1.Controls.Add(this.lbTotal);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 173);
+            this.groupBox1.Location = new System.Drawing.Point(12, 223);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 82);
+            this.groupBox1.Size = new System.Drawing.Size(930, 82);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información";
@@ -220,11 +228,114 @@
             this.rbNo.Text = "No";
             this.rbNo.UseVisualStyleBackColor = true;
             // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.Location = new System.Drawing.Point(83, 28);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(0, 16);
+            this.lbTotal.TabIndex = 6;
+            // 
+            // lbEspanol
+            // 
+            this.lbEspanol.AutoSize = true;
+            this.lbEspanol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEspanol.Location = new System.Drawing.Point(87, 57);
+            this.lbEspanol.Name = "lbEspanol";
+            this.lbEspanol.Size = new System.Drawing.Size(0, 16);
+            this.lbEspanol.TabIndex = 7;
+            // 
+            // lbFinalizados
+            // 
+            this.lbFinalizados.AutoSize = true;
+            this.lbFinalizados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFinalizados.Location = new System.Drawing.Point(466, 28);
+            this.lbFinalizados.Name = "lbFinalizados";
+            this.lbFinalizados.Size = new System.Drawing.Size(0, 16);
+            this.lbFinalizados.TabIndex = 8;
+            // 
+            // lbIngles
+            // 
+            this.lbIngles.AutoSize = true;
+            this.lbIngles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIngles.Location = new System.Drawing.Point(221, 57);
+            this.lbIngles.Name = "lbIngles";
+            this.lbIngles.Size = new System.Drawing.Size(0, 16);
+            this.lbIngles.TabIndex = 9;
+            // 
+            // lbJapones
+            // 
+            this.lbJapones.AutoSize = true;
+            this.lbJapones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbJapones.Location = new System.Drawing.Point(354, 57);
+            this.lbJapones.Name = "lbJapones";
+            this.lbJapones.Size = new System.Drawing.Size(0, 16);
+            this.lbJapones.TabIndex = 10;
+            // 
+            // lbFrances
+            // 
+            this.lbFrances.AutoSize = true;
+            this.lbFrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFrances.Location = new System.Drawing.Point(481, 57);
+            this.lbFrances.Name = "lbFrances";
+            this.lbFrances.Size = new System.Drawing.Size(0, 16);
+            this.lbFrances.TabIndex = 11;
+            // 
+            // lbAcabados
+            // 
+            this.lbAcabados.AutoSize = true;
+            this.lbAcabados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAcabados.Location = new System.Drawing.Point(437, 28);
+            this.lbAcabados.Name = "lbAcabados";
+            this.lbAcabados.Size = new System.Drawing.Size(0, 16);
+            this.lbAcabados.TabIndex = 12;
+            // 
+            // lbSinAcabar
+            // 
+            this.lbSinAcabar.AutoSize = true;
+            this.lbSinAcabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSinAcabar.Location = new System.Drawing.Point(585, 28);
+            this.lbSinAcabar.Name = "lbSinAcabar";
+            this.lbSinAcabar.Size = new System.Drawing.Size(0, 16);
+            this.lbSinAcabar.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(443, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 16);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Año:";
+            // 
+            // cmbAnio
+            // 
+            this.cmbAnio.FormattingEnabled = true;
+            this.cmbAnio.Location = new System.Drawing.Point(518, 82);
+            this.cmbAnio.Name = "cmbAnio";
+            this.cmbAnio.Size = new System.Drawing.Size(121, 21);
+            this.cmbAnio.TabIndex = 14;
+            this.cmbAnio.SelectedIndexChanged += new System.EventHandler(this.cmbAnio_SelectedIndexChanged);
+            // 
+            // lbInfoAnio
+            // 
+            this.lbInfoAnio.AutoSize = true;
+            this.lbInfoAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInfoAnio.Location = new System.Drawing.Point(34, 171);
+            this.lbInfoAnio.Name = "lbInfoAnio";
+            this.lbInfoAnio.Size = new System.Drawing.Size(0, 16);
+            this.lbInfoAnio.TabIndex = 15;
+            // 
             // consultarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(954, 582);
+            this.Controls.Add(this.lbInfoAnio);
+            this.Controls.Add(this.cmbAnio);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.rbNo);
             this.Controls.Add(this.rbSi);
             this.Controls.Add(this.label7);
@@ -255,7 +366,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
@@ -264,5 +374,16 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RadioButton rbSi;
         private System.Windows.Forms.RadioButton rbNo;
+        private System.Windows.Forms.Label lbTotal;
+        private System.Windows.Forms.Label lbFinalizados;
+        private System.Windows.Forms.Label lbEspanol;
+        private System.Windows.Forms.Label lbFrances;
+        private System.Windows.Forms.Label lbJapones;
+        private System.Windows.Forms.Label lbIngles;
+        private System.Windows.Forms.Label lbSinAcabar;
+        private System.Windows.Forms.Label lbAcabados;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbAnio;
+        private System.Windows.Forms.Label lbInfoAnio;
     }
 }

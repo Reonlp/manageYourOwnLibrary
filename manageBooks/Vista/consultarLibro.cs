@@ -17,13 +17,29 @@ namespace manageBooks.Vista
         public consultarLibro()
         {
             InitializeComponent();
+            int anioActual = DateTime.Now.Year;
+            for(int i = 2005; i <= anioActual; i++)
+            {
+                cmbAnio.Items.Add(i.ToString());
+            }
+            
         }
 
         BBDDLibros datosLibros = new BBDDLibros();
 
+        
+
         private void button1_Click(object sender, EventArgs e)
         {
            List<Libro> todosLosLibros = datosLibros.getAllBooks();
+            int numeroDeLibros = todosLosLibros.Count;
+            int librosAcabados = 0;
+            int librosSinAcabar = 0;
+            int librosJapones = 0;
+            int librosEspanol = 0;
+            int librosIngles = 0;
+            int librosFrances = 0;
+
             String finalizado = "";
             table.Rows.Clear();
 
@@ -35,20 +51,49 @@ namespace manageBooks.Vista
                 row.Cells[0].Value = todosLosLibros[i].id;
                 row.Cells[1].Value = todosLosLibros[i].titulo;
                 row.Cells[2].Value = todosLosLibros[i].idioma;
+               
+                if(todosLosLibros[i].idioma.Trim().Equals("Español"))
+                {
+                    librosEspanol++;
+            
+                } else if (todosLosLibros[i].idioma.Trim().Equals("Japonés"))
+                {
+                    librosJapones++;
+                }
+                else if(todosLosLibros[i].idioma.Trim().Equals("Inglés"))
+                {
+                    librosIngles++;
+                }
+                else if (todosLosLibros[i].idioma.Trim().Equals("Francés"))
+                {
+                    librosFrances++;
+                }
+
                 if (todosLosLibros[i].finalizado)
                 {
                     finalizado = "Sí";
+                    librosAcabados++;
                 }
                 else
                 {
                     finalizado = "No";
+                    librosSinAcabar++;
                 }
                 row.Cells[3].Value = finalizado;
                 row.Cells[4].Value = todosLosLibros[i].fecha;
+                
                 table.Rows.Add(row);
             }
 
             table.AllowUserToAddRows = false;
+
+            lbTotal.Text = numeroDeLibros.ToString() + " libros";
+            lbAcabados.Text = librosAcabados.ToString() + " (leídos)";
+            lbSinAcabar.Text = librosSinAcabar.ToString() + " (no terminados)";
+            lbEspanol.Text = librosEspanol.ToString() + " (español)";
+            lbIngles.Text = librosIngles.ToString() + " (inglés)";
+            lbJapones.Text = librosJapones.ToString() + " (japonés)";
+            lbFrances.Text = librosFrances.ToString() + " (francés)";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -146,6 +191,94 @@ namespace manageBooks.Vista
 
                 table.AllowUserToAddRows = false;
             }
+        }
+
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.table.Rows[e.RowIndex];
+                String id = row.Cells[0].Value.ToString();
+                MessageBox.Show(id);
+            }           
+        }
+
+        private void cmbAnio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String finalizado = "";
+            List<Libro> todosLosLibros = datosLibros.getAllBooks();
+            List<Libro> librosPorAnio = new List<Libro>();
+            int anio = Int32.Parse(cmbAnio.Text);
+            int numeroDeLibros = 0;
+            int librosAcabados = 0;
+            int librosSinAcabar = 0;
+            int librosJapones = 0;
+            int librosEspanol = 0;
+            int librosIngles = 0;
+            int librosFrances = 0;
+
+
+
+            for(int p = 0; p < todosLosLibros.Count; p++)
+            {
+                if(todosLosLibros[p].fecha.Year == anio)
+                {
+                    librosPorAnio.Add(todosLosLibros[p]);
+                    
+                }
+            }
+
+            numeroDeLibros = librosPorAnio.Count;
+
+
+            table.AllowUserToAddRows = true;
+
+            for (int i = 0; i < librosPorAnio.Count; i++)
+            {
+              
+                    DataGridViewRow row = (DataGridViewRow)table.Rows[i].Clone();
+
+
+                    row.Cells[0].Value = librosPorAnio[i].id;
+                    row.Cells[1].Value = librosPorAnio[i].titulo;
+                    row.Cells[2].Value = librosPorAnio[i].idioma;
+                    if (librosPorAnio[i].idioma.Trim().Equals("Español"))
+                    {
+                        librosEspanol++;
+
+                    }
+                    else if (librosPorAnio[i].idioma.Trim().Equals("Japonés"))
+                    {
+                        librosJapones++;
+                    }
+                    else if (librosPorAnio[i].idioma.Trim().Equals("Inglés"))
+                    {
+                        librosIngles++;
+                    }
+                    else if (librosPorAnio[i].idioma.Trim().Equals("Francés"))
+                    {
+                        librosFrances++;
+                    }
+
+                if (librosPorAnio[i].finalizado)
+                    {
+                        finalizado = "Sí";
+                        librosAcabados++;
+                    }
+                    else
+                    {
+                        finalizado = "No";
+                        librosSinAcabar++;
+                    }
+                    row.Cells[3].Value = finalizado;
+                    row.Cells[4].Value = librosPorAnio[i].fecha;
+                    table.Rows.Add(row);
+
+            }
+
+            table.AllowUserToAddRows = false;
+
+            lbInfoAnio.Text = "Año " + anio.ToString() + ": " + numeroDeLibros + " libros leídos.    " + librosEspanol + " (español) " + librosIngles + " (inglés) " + librosJapones + " (japonés) " + librosFrances + " (francés)";
         }
     }
 }
