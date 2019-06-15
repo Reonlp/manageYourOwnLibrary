@@ -64,6 +64,12 @@
     <Compile Include="Controlador\BBDDLibros.cs" />
     <Compile Include="Modelo\Autor.cs" />
     <Compile Include="Modelo\Libro.cs" />
+    <Compile Include="Vista\2OptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\2OptionDialog.Designer.cs">
+      <DependentUpon>2OptionDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\agregarLibro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Vista\2OptionDialog.resx">
+      <DependentUpon>2OptionDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\agregarLibro.resx">
       <DependentUpon>agregarLibro.cs</DependentUpon>
     </EmbeddedResource>

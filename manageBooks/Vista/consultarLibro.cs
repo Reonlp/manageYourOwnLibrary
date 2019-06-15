@@ -27,7 +27,14 @@ namespace manageBooks.Vista
 
         BBDDLibros datosLibros = new BBDDLibros();
 
-        
+        private int _probandoComunicacion = 0;
+
+        public int probandoComunicacion
+        {
+            get { return _probandoComunicacion; }
+            set { _probandoComunicacion = value; }
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -199,12 +206,16 @@ namespace manageBooks.Vista
             {
                 DataGridViewRow row = this.table.Rows[e.RowIndex];
                 String id = row.Cells[0].Value.ToString();
-                MessageBox.Show(id);
+                
+                _2OptionDialog dialogo = new _2OptionDialog("Qué desea hacer?", "Volar", "Follar", this);
+                dialogo.Show();
+                
             }           
         }
 
         private void cmbAnio_SelectedIndexChanged(object sender, EventArgs e)
         {
+            MessageBox.Show(probandoComunicacion.ToString());
             String finalizado = "";
             List<Libro> todosLosLibros = datosLibros.getAllBooks();
             List<Libro> librosPorAnio = new List<Libro>();

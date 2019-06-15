@@ -12,3 +12,4 @@ C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\D
 C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\bin\Debug\Database.mdf
 C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\bin\Debug\Database_log.ldf
 C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.Vista.consultarLibro.resources
+C:\Users\leons\OneDrive\Bureau\gestionarLibrosApp2\manageBooks\manageBooks\obj\Debug\manageBooks.Vista._2OptionDialog.resources
