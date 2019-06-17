@@ -1,4 +1,5 @@
-﻿using System;
+﻿using manageBooks.Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace manageBooks.Vista
         //This is one way of having access from one form to the data of another
         //A channel of comunication
         private consultarLibro mainForm = null;
+        BBDDLibros datos = new BBDDLibros();
 
         //Constructor of the panel I created. In c# .net we don't have the kind of optionPanes
         //we had in Java, so one way of getting the same result is creating your own panels.
@@ -27,7 +29,11 @@ namespace manageBooks.Vista
             bt1.Text = boton1;
             bt2.Text = boton2;
             mainForm = callingForm as consultarLibro;
+            
+            
         }
+
+        int id = 0;
 
         private void _2OptionDialog_Load(object sender, EventArgs e)
         {
@@ -37,13 +43,26 @@ namespace manageBooks.Vista
         //Yes option
         private void bt1_Click(object sender, EventArgs e)
         {
-            this.mainForm.probandoComunicacion = 1;
+
+
+
+           
+
+
+
+
         }
 
         //No option
         private void bt2_Click(object sender, EventArgs e)
         {
-            this.mainForm.probandoComunicacion = -1;
+            id = this.mainForm.borrarPorId;
+            datos.borrarLibro(id);
+            this.Close();
         }
+
+       
+
+       
     }
 }

@@ -36,9 +36,9 @@ namespace manageBooks.Controlador
 
                 }
             }
-               
 
-            
+
+
 
             dr.Close();
 
@@ -147,14 +147,15 @@ namespace manageBooks.Controlador
                 //SqlDataReader dr;
 
                 con.Open();
-                if(libro.finalizado == true)
+                if (libro.finalizado == true)
                 {
                     sintax = "INSERT INTO Libros (Titulo, Idioma, Finalizado, Fecha) VALUES ('" + libro.titulo + "', '" + libro.idioma + "', '" + libro.finalizado + "', '" + libro.fecha + "');";
-                } else
+                }
+                else
                 {
                     sintax = "INSERT INTO Libros (Titulo, Idioma, Finalizado, Fecha) VALUES ('" + libro.titulo + "', '" + libro.idioma + "', '" + libro.finalizado + "', '" + DateTime.MinValue + "');";
                 }
-                
+
                 cmd = new SqlCommand(sintax, con);
                 int result = cmd.ExecuteNonQuery();
 
@@ -175,5 +176,45 @@ namespace manageBooks.Controlador
             }
 
         }
+
+        public void borrarLibro(int id)
+        {
+            String sintax = "";
+            try
+            {
+                SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\leons\\OneDrive\\Bureau\\gestionarLibrosApp2\\manageBooks\\manageBooks\\Database.mdf;Integrated Security=True");
+                SqlCommand cmd;
+                //SqlDataReader dr;
+
+                con.Open();
+
+
+                sintax = "DELETE FROM Libros WHERE Id = " + id;
+
+
+
+                cmd = new SqlCommand(sintax, con);
+                int result = cmd.ExecuteNonQuery();
+
+                con.Close();
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Libro borrado con éxito");
+                }
+                else
+                {
+                    MessageBox.Show("Se ha producido un error");
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Se ha producido un error");
+            }
+
+        }
     }
 }
+
+
+
