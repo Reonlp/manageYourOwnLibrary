@@ -45,6 +45,36 @@ namespace manageBooks.Controlador
             return todosLosLibros;
         }
 
+        public Libro mostrarPorId(int id)
+        {
+            Libro libro = new Libro();
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\leons\\OneDrive\\Bureau\\gestionarLibrosApp2\\manageBooks\\manageBooks\\Database.mdf;Integrated Security=True");
+            SqlCommand cmd;
+            SqlDataReader dr;
+
+            con.Open();
+            String sintax = "SELECT * FROM Libros WHERE Id = " + id;
+            cmd = new SqlCommand(sintax, con);
+            dr = cmd.ExecuteReader();
+
+            if (dr.Read())
+            {
+                libro.id = dr.GetInt32(0);
+                libro.titulo = dr.GetString(1);
+                libro.idioma = dr.GetString(2);
+                libro.finalizado = dr.GetBoolean(3);
+                libro.fecha = dr.GetDateTime(4);
+            }
+                    
+
+
+     
+
+            dr.Close();
+
+            return libro;
+        }
+
         public List<Libro> mostrarPorIdioma(String idioma)
         {
             List<Libro> librosPorIdioma = new List<Libro>();
@@ -173,6 +203,45 @@ namespace manageBooks.Controlador
             catch (SqlException ex)
             {
                 MessageBox.Show("Se ha producido un error");
+            }
+
+        }
+
+        public void actualizarLibro(int id, String titulo, String idioma, Boolean finalizado, DateTime fecha)
+        {
+            String sintax = "";
+            try
+            {
+                SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\leons\\OneDrive\\Bureau\\gestionarLibrosApp2\\manageBooks\\manageBooks\\Database.mdf;Integrated Security=True");
+                SqlCommand cmd;
+                //SqlDataReader dr;
+
+                con.Open();
+               
+                
+                sintax = "UPDATE Libros SET Titulo = " + "'" + titulo + "', Idioma = '" + idioma + "', Finalizado = '" + finalizado + "', fecha = '" + fecha + "' WHERE ID = " + id + ";";   
+                   
+                
+                
+                cmd = new SqlCommand(sintax, con);
+                int result = cmd.ExecuteNonQuery();
+
+                con.Close();
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Libro actualizado con éxito");
+                }
+                else
+                {
+                    MessageBox.Show("Se ha producido un error");
+                    
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+               
             }
 
         }

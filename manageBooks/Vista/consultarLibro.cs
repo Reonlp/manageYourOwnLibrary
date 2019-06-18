@@ -294,5 +294,10 @@ namespace manageBooks.Vista
 
             lbInfoAnio.Text = "Año " + anio.ToString() + ": " + numeroDeLibros + " libros leídos.    " + librosEspanol + " (español) " + librosIngles + " (inglés) " + librosJapones + " (japonés) " + librosFrances + " (francés)";
         }
+
+        private void consultarLibro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

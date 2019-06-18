@@ -39,20 +39,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbSinAcabar = new System.Windows.Forms.Label();
+            this.lbAcabados = new System.Windows.Forms.Label();
+            this.lbFrances = new System.Windows.Forms.Label();
+            this.lbJapones = new System.Windows.Forms.Label();
+            this.lbIngles = new System.Windows.Forms.Label();
+            this.lbFinalizados = new System.Windows.Forms.Label();
+            this.lbEspanol = new System.Windows.Forms.Label();
+            this.lbTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.rbSi = new System.Windows.Forms.RadioButton();
             this.rbNo = new System.Windows.Forms.RadioButton();
-            this.lbTotal = new System.Windows.Forms.Label();
-            this.lbEspanol = new System.Windows.Forms.Label();
-            this.lbFinalizados = new System.Windows.Forms.Label();
-            this.lbIngles = new System.Windows.Forms.Label();
-            this.lbJapones = new System.Windows.Forms.Label();
-            this.lbFrances = new System.Windows.Forms.Label();
-            this.lbAcabados = new System.Windows.Forms.Label();
-            this.lbSinAcabar = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbAnio = new System.Windows.Forms.ComboBox();
             this.lbInfoAnio = new System.Windows.Forms.Label();
@@ -161,6 +161,78 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información";
             // 
+            // lbSinAcabar
+            // 
+            this.lbSinAcabar.AutoSize = true;
+            this.lbSinAcabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSinAcabar.Location = new System.Drawing.Point(585, 28);
+            this.lbSinAcabar.Name = "lbSinAcabar";
+            this.lbSinAcabar.Size = new System.Drawing.Size(0, 16);
+            this.lbSinAcabar.TabIndex = 13;
+            // 
+            // lbAcabados
+            // 
+            this.lbAcabados.AutoSize = true;
+            this.lbAcabados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAcabados.Location = new System.Drawing.Point(437, 28);
+            this.lbAcabados.Name = "lbAcabados";
+            this.lbAcabados.Size = new System.Drawing.Size(0, 16);
+            this.lbAcabados.TabIndex = 12;
+            // 
+            // lbFrances
+            // 
+            this.lbFrances.AutoSize = true;
+            this.lbFrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFrances.Location = new System.Drawing.Point(481, 57);
+            this.lbFrances.Name = "lbFrances";
+            this.lbFrances.Size = new System.Drawing.Size(0, 16);
+            this.lbFrances.TabIndex = 11;
+            // 
+            // lbJapones
+            // 
+            this.lbJapones.AutoSize = true;
+            this.lbJapones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbJapones.Location = new System.Drawing.Point(354, 57);
+            this.lbJapones.Name = "lbJapones";
+            this.lbJapones.Size = new System.Drawing.Size(0, 16);
+            this.lbJapones.TabIndex = 10;
+            // 
+            // lbIngles
+            // 
+            this.lbIngles.AutoSize = true;
+            this.lbIngles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIngles.Location = new System.Drawing.Point(221, 57);
+            this.lbIngles.Name = "lbIngles";
+            this.lbIngles.Size = new System.Drawing.Size(0, 16);
+            this.lbIngles.TabIndex = 9;
+            // 
+            // lbFinalizados
+            // 
+            this.lbFinalizados.AutoSize = true;
+            this.lbFinalizados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFinalizados.Location = new System.Drawing.Point(466, 28);
+            this.lbFinalizados.Name = "lbFinalizados";
+            this.lbFinalizados.Size = new System.Drawing.Size(0, 16);
+            this.lbFinalizados.TabIndex = 8;
+            // 
+            // lbEspanol
+            // 
+            this.lbEspanol.AutoSize = true;
+            this.lbEspanol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEspanol.Location = new System.Drawing.Point(87, 57);
+            this.lbEspanol.Name = "lbEspanol";
+            this.lbEspanol.Size = new System.Drawing.Size(0, 16);
+            this.lbEspanol.TabIndex = 7;
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.Location = new System.Drawing.Point(83, 28);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(0, 16);
+            this.lbTotal.TabIndex = 6;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -228,78 +300,6 @@
             this.rbNo.Text = "No";
             this.rbNo.UseVisualStyleBackColor = true;
             // 
-            // lbTotal
-            // 
-            this.lbTotal.AutoSize = true;
-            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal.Location = new System.Drawing.Point(83, 28);
-            this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(0, 16);
-            this.lbTotal.TabIndex = 6;
-            // 
-            // lbEspanol
-            // 
-            this.lbEspanol.AutoSize = true;
-            this.lbEspanol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEspanol.Location = new System.Drawing.Point(87, 57);
-            this.lbEspanol.Name = "lbEspanol";
-            this.lbEspanol.Size = new System.Drawing.Size(0, 16);
-            this.lbEspanol.TabIndex = 7;
-            // 
-            // lbFinalizados
-            // 
-            this.lbFinalizados.AutoSize = true;
-            this.lbFinalizados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFinalizados.Location = new System.Drawing.Point(466, 28);
-            this.lbFinalizados.Name = "lbFinalizados";
-            this.lbFinalizados.Size = new System.Drawing.Size(0, 16);
-            this.lbFinalizados.TabIndex = 8;
-            // 
-            // lbIngles
-            // 
-            this.lbIngles.AutoSize = true;
-            this.lbIngles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIngles.Location = new System.Drawing.Point(221, 57);
-            this.lbIngles.Name = "lbIngles";
-            this.lbIngles.Size = new System.Drawing.Size(0, 16);
-            this.lbIngles.TabIndex = 9;
-            // 
-            // lbJapones
-            // 
-            this.lbJapones.AutoSize = true;
-            this.lbJapones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbJapones.Location = new System.Drawing.Point(354, 57);
-            this.lbJapones.Name = "lbJapones";
-            this.lbJapones.Size = new System.Drawing.Size(0, 16);
-            this.lbJapones.TabIndex = 10;
-            // 
-            // lbFrances
-            // 
-            this.lbFrances.AutoSize = true;
-            this.lbFrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFrances.Location = new System.Drawing.Point(481, 57);
-            this.lbFrances.Name = "lbFrances";
-            this.lbFrances.Size = new System.Drawing.Size(0, 16);
-            this.lbFrances.TabIndex = 11;
-            // 
-            // lbAcabados
-            // 
-            this.lbAcabados.AutoSize = true;
-            this.lbAcabados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAcabados.Location = new System.Drawing.Point(437, 28);
-            this.lbAcabados.Name = "lbAcabados";
-            this.lbAcabados.Size = new System.Drawing.Size(0, 16);
-            this.lbAcabados.TabIndex = 12;
-            // 
-            // lbSinAcabar
-            // 
-            this.lbSinAcabar.AutoSize = true;
-            this.lbSinAcabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSinAcabar.Location = new System.Drawing.Point(585, 28);
-            this.lbSinAcabar.Name = "lbSinAcabar";
-            this.lbSinAcabar.Size = new System.Drawing.Size(0, 16);
-            this.lbSinAcabar.TabIndex = 13;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -347,6 +347,7 @@
             this.Controls.Add(this.button1);
             this.Name = "consultarLibro";
             this.Text = "consultarLibro";
+            this.Load += new System.EventHandler(this.consultarLibro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

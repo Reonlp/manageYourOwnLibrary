@@ -34,10 +34,16 @@ namespace manageBooks.Vista
         }
 
         int id = 0;
+        public int enviarId
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
 
         private void _2OptionDialog_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         //Yes option
@@ -45,12 +51,11 @@ namespace manageBooks.Vista
         {
 
 
-
-           
-
-
-
-
+            id = this.mainForm.borrarPorId;
+            actualizar actualizarLibro = new actualizar(this);
+            actualizarLibro.Show();
+            this.Close();
+            
         }
 
         //No option
